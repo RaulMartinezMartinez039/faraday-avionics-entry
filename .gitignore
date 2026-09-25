@@ -1,0 +1,11 @@
+**/build/
+**/.settings/
+**/.vscode/
+**/.cache/
+**/mx.scratch
+**/.mxproject
+**/.clangd
+*.elf
+*.map
+*.obj
+*.o
