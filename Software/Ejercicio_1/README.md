@@ -2,7 +2,7 @@
 
 Selección razonada del STM32, configuración inicial de interfaces mediante STM32CubeMX y prueba del cálculo de altura con presión simulada.
 
-- [Informe](Ejercicio_1.pdf) y [fuente LaTeX](Ejercicio_1.tex)
+- [Informe](Ejercicio_1.pdf)
 - [Proyecto CubeMX y código C](firmware/)
 - [Configuración editable de CubeMX](firmware/Faraday_L476_Ej1_Simulacion.ioc)
 
