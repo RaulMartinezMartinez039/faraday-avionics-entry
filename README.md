@@ -4,11 +4,14 @@ Repositorio de mis ejercicios de entrada al departamento de Aviónica.
 
 ## Aviónica Software
 
-| Ejercicio | Contenido |
-|---|---|
-| [Ejercicio 1](Software/Ejercicio_1/README.md) | Selección del STM32, configuración básica y prueba de altura con presión simulada |
-| [Ejercicio 2](Software/Ejercicio_2/README.md) | Integración de barómetros, IMU y recepción de bytes GNSS |
+| Ejercicio | Contenido | Informe |
+|---|---|---|
+| [Ejercicio 1](Software/Ejercicio_1/README.md) | Selección del STM32, presupuesto energético y de memoria, configuración básica y altura con presión simulada | [PDF](Software/Ejercicio_1/Ejercicio_1.pdf) |
+| [Ejercicio 2](Software/Ejercicio_2/README.md) | Selección e integración de sensores: barómetros, lectura parcial de la IMU y recepción de bytes GNSS | [PDF](Software/Ejercicio_2/Ejercicio_2.pdf) |
+| [Ejercicio 3](Software/Ejercicio_3/README.md) | Filtro de estado de error, pruebas de integración y dos simulaciones de trayectoria | [PDF](Software/Ejercicio_3/Ejercicio_3.pdf) |
 
-El [informe del ejercicio 1](Software/Ejercicio_1/Ejercicio_1.pdf) recoge la elección del microcontrolador y la configuración inicial. El [informe del ejercicio 2](Software/Ejercicio_2/Ejercicio_2.pdf) documenta la integración de los dispositivos y sus límites. Cada ejercicio incluye su proyecto STM32CubeMX y su código en un directorio `firmware/` independiente.
+Los ejercicios 1 y 2 incluyen proyectos STM32CubeMX independientes en `firmware/`. El ejercicio 3 contiene una implementación en C que se ejecuta en ordenador, sus pruebas y los resultados utilizados en el informe. Su README explica cómo compilarla y ejecutarla.
 
-El ejercicio 1 utiliza presión simulada. El ejercicio 2 utiliza las lecturas disponibles de dos LPS22DF para el cálculo de altura; también incorpora la lectura del acelerómetro de bajo rango y el giróscopo de la IMU, configura el canal de alto rango y recibe bytes del GNSS. El proyecto del ejercicio 2 se ha compilado, pero no se ha probado con sensores físicos ni constituye software de vuelo validado.
+El ejercicio 1 utiliza presión simulada. El ejercicio 2 adquiere presión, aceleración de bajo rango y velocidad angular, configura el acelerómetro de alto rango y recibe bytes del GNSS; todavía no procesa el alto rango ni interpreta las tramas GNSS. El filtro del ejercicio 3 se evalúa con medidas sintéticas y aún no está conectado a esos controladores. Los proyectos no se han validado con sensores físicos ni en vuelo.
+
+El ejercicio personal se incorporará por separado cuando esté terminado.

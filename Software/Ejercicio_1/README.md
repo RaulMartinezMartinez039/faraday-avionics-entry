@@ -11,3 +11,5 @@ El proyecto y el ejecutable CMake se llaman `Faraday_L476_Ej1_Simulacion`. El pr
 Para abrir la configuración, cargar el archivo `.ioc` en STM32CubeMX. Para compilar mediante CMake se necesita una cadena de herramientas `arm-none-eabi` compatible y las dependencias indicadas en `CMakePresets.json`.
 
 Los archivos bajo `Drivers/` proceden de STM32CubeMX/ST y conservan sus avisos de licencia.
+
+El PDF es la versión de entrega actual. La fuente LaTeX conservada en `historico/` corresponde a una versión anterior y no permite reconstruir este PDF.

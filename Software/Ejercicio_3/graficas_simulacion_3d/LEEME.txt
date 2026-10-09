@@ -1,0 +1,32 @@
+GRÁFICAS DE LA SIMULACIÓN 3D
+Fuente: resultados_simulacion_3d.csv adjuntado por el usuario.
+Todas las muestras se representan sin suavizado. PNG a 250 dpi y PDF vectorial.
+Las escalas de la vista 3D son diferentes; la proyección horizontal tiene escala igual.
+Posición y velocidad: sistema NED; altura = -pD y ascenso = -vD.
+Errores aditivos, altura y ascenso: referencia - estimacion.
+Error angular: log(conjugado(q_est) * q_ref), expresado en el cuerpo estimado.
+Bandas: ±3 veces la desviación típica de la diagonal de P. Son bandas marginales
+del modelo, no una garantía de cobertura ni una prueba Monte Carlo.
+Cuaterniones estimados alineados de signo con la referencia solo al dibujar.
+La inclinación estimada se calcula desde la dirección del eje X del cuerpo.
+Líneas verticales: despegue y apagado, detectados en la columna de empuje.
+Las métricas RMS excluyen la fila inicial, igual que la salida del simulador.
+Los límites de los ejes no se recortan para ocultar transitorios.
+
+FIGURAS
+01_trayectoria_3d: Trayectoria de referencia y estimación
+02_p_ned: Posición en NED
+03_v_ned: Velocidad en NED
+04_movimiento_vertical: Altura y velocidad vertical
+05_error_posicion: Errores de posición e incertidumbre
+06_error_velocidad: Errores de velocidad e incertidumbre
+07_cuaterniones: Orientación: componentes del cuaternión cuerpo → NED
+08_orientacion: Error angular total e inclinación del eje longitudinal
+09_error_angular: Errores angulares locales e incertidumbre
+10_sesgos_acc: Sesgos del acelerómetro
+11_sesgos_giro: Sesgos del giróscopo
+12_error_sesgos_acc: Errores de los sesgos del acelerómetro
+13_error_sesgos_giro: Errores de los sesgos del giróscopo
+14_incertidumbres: Desviaciones típicas del estado de error (escala logarítmica)
+15_perfil_vuelo: Perfil del vuelo simulado
+16_errores_3d: Magnitud de los errores de posición y velocidad

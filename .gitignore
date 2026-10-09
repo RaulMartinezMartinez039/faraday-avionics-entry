@@ -9,3 +9,6 @@
 *.map
 *.obj
 *.o
+*.exe
+*.pyc
+**/__pycache__/
