@@ -14,4 +14,6 @@ Los ejercicios 1 y 2 incluyen proyectos STM32CubeMX independientes en `firmware/
 
 El ejercicio 1 utiliza presión simulada. El ejercicio 2 adquiere presión, aceleración de bajo rango y velocidad angular, configura el acelerómetro de alto rango y recibe bytes del GNSS; todavía no procesa el alto rango ni interpreta las tramas GNSS. El filtro del ejercicio 3 se evalúa con medidas sintéticas y aún no está conectado a esos controladores. Los proyectos no se han validado con sensores físicos ni en vuelo.
 
-El ejercicio personal se incorporará por separado cuando esté terminado.
+## Ejercicio personal
+
+[Simulación funcional de un FTS en Proteus](Software/Ejercicio_personal/FTS/README.md), realizada en equipo en la asignatura de Ingeniería Electrónica. Integra una entrada analógica PT100, programación del ATmega328P por registros, visualización y actuadores de demostración. Se incluyen la memoria y las figuras originales; los archivos editables de Proteus y el código fuente aún no forman parte de la entrega.
