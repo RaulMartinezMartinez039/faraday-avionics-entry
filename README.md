@@ -16,4 +16,4 @@ El ejercicio 1 utiliza presión simulada. El ejercicio 2 adquiere presión, acel
 
 ## Ejercicio personal
 
-[Simulación funcional de un FTS en Proteus](Software/Ejercicio_personal/FTS/README.md), realizada en equipo en la asignatura de Ingeniería Electrónica. Integra una entrada analógica PT100, programación del ATmega328P por registros, visualización y actuadores de demostración. Se incluyen la memoria y las figuras originales; los archivos editables de Proteus y el código fuente aún no forman parte de la entrega.
+[Simulación funcional de un FTS en Proteus](Software/Ejercicio_personal/FTS/README.md), realizada en equipo en la asignatura de Ingeniería Electrónica. Integra una entrada analógica PT100, programación del ATmega328P por registros, visualización y actuadores de demostración. Se incluyen la memoria, las figuras, el paquete original de Proteus, el esquema y el código fuente. El README del proyecto explica las diferencias entre el código recibido y el anexo del informe.

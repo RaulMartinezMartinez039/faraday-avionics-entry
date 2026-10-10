@@ -3,6 +3,8 @@
 Proyecto académico de Ingeniería Electrónica realizado por **Raúl Martínez Martínez, Miguel Vela García y Julen Lorenzo Moa**. Se incorpora como muestra de integración de electrónica y programación de un microcontrolador.
 
 - [Memoria original](FTS_Proteus.pdf)
+- [Código fuente del proyecto](codigo/main.ino)
+- [Paquete original de Proteus](Proyecto_FTS.zip) y [contenido descomprimido](proyecto/)
 - [Captura del circuito en Proteus](figuras/circuito_proteus.jpeg)
 - [Diagrama de flujo del planteamiento](figuras/diagrama_flujo.jpeg)
 
@@ -30,18 +32,32 @@ El informe recoge la variación de la temperatura visualizada al modificar la PT
 
 Estas comprobaciones se presentan como las descritas por los autores. El material disponible no incluye una nueva ejecución de Proteus ni registros temporales que permitan verificar cuantitativamente los retardos.
 
-## Correspondencia entre texto y anexo
+## Correspondencia entre memoria y proyecto
 
-La memoria original se conserva sin modificaciones. Para interpretar su alcance deben tenerse en cuenta estas discrepancias:
+El código del paquete de Proteus y el anexo del PDF son versiones diferentes. Se ha comparado el contenido del listado con el archivo fuente, omitiendo los comentarios y el espaciado introducido por el PDF. Las diferencias funcionales localizadas son:
 
-- El texto afirma que existe histéresis térmica de 2 °C, pero la función incluida en el anexo solo compara la temperatura con los límites definidos y no conserva un estado de histéresis.
-- La explicación menciona `bloqueo_secuencia`, que no aparece en el programa del anexo. Esa protección no puede considerarse acreditada por el código adjunto.
-- Los tiempos asociados a los bucles son aproximados: también incluyen conversiones, cálculos y refresco de displays. No se han aportado medidas temporales de la simulación.
-- El diagrama de flujo expresa el planteamiento funcional; el propio informe distingue ese planteamiento de la implementación simplificada.
-- El diagrama representa una comprobación de batería y un límite temporal de 5 s; el anexo no incluye esa lectura de batería y el texto describe un límite de unos 10 s. No deben interpretarse como una única especificación verificada.
+| Elemento | Anexo del PDF | Código del proyecto |
+|---|---|---|
+| `bloqueo_secuencia` | No aparece | Está declarada y se utiliza en el bucle principal |
+| Histéresis térmica | Comparación directa con los límites | Conserva el estado e incorpora el margen de 2 °C descrito en el texto |
+| LED de fallo térmico | Depende del límite superior de temperatura | Depende de `tempready` |
 
-## Archivos disponibles
+Por tanto, las menciones del texto a la histéresis y a `bloqueo_secuencia` sí tienen correspondencia en el código original aportado. El anexo debe actualizarse para reflejar esa misma versión.
 
-Se incluyen la memoria y las dos figuras extraídas del PDF, conservando su resolución original. El código aparece como listado dentro del anexo. No se incluye un fichero fuente reconstruido desde el PDF ni un ejecutable sin verificar.
+Se mantienen dos diferencias de documentación: el diagrama representa una lectura de batería que no aparece en el código y marca 5 s donde el texto habla de unos 10 s. Los retardos de los bucles también incluyen cálculos, conversiones y refresco de displays; no se han aportado registros que permitan verificar esas duraciones.
 
-Para reproducir el proyecto faltan los archivos originales de Proteus, el código fuente y la configuración de compilación utilizada.
+## Archivos y entorno del proyecto
+
+| Archivo | Contenido |
+|---|---|
+| [Proyecto_FTS.zip](Proyecto_FTS.zip) | Paquete original recibido, conservado byte a byte |
+| [proyecto/ROOT.DSN](proyecto/ROOT.DSN) | Esquema de Proteus |
+| [proyecto/PROJECT.XML](proyecto/PROJECT.XML) y [proyecto/FIRMWARE.XML](proyecto/FIRMWARE.XML) | Metadatos del proyecto |
+| [proyecto/FIRMWARE/ATmega328P.XML](proyecto/FIRMWARE/ATmega328P.XML) | Configuración del microcontrolador y de compilación |
+| [proyecto/FIRMWARE/ATmega328P/main.ino](proyecto/FIRMWARE/ATmega328P/main.ino) | Fuente original con su codificación de caracteres |
+| [codigo/main.ino](codigo/main.ino) | Copia del mismo código en UTF-8 para facilitar su lectura en GitHub |
+| [proyecto/FIRMWARE/ATmega328P/Debug/Debug.elf](proyecto/FIRMWARE/ATmega328P/Debug/Debug.elf) | Ejecutable original incluido en el paquete |
+
+La configuración identifica un ATmega328P a 16 MHz y el compilador `Arduino AVR (Proteus)`. El programa utiliza `setup()` y `loop()`. El directorio `proyecto/` conserva los ocho archivos originales del ZIP, incluidos los auxiliares.
+
+Se ha comprobado la integridad del ZIP y la equivalencia de la copia UTF-8 con la fuente original. El proyecto no se ha abierto ni ejecutado de nuevo en Proteus y el ELF se conserva como el binario recibido, sin afirmar que se haya recompilado desde esta fuente. El paquete aportado no contiene un archivo independiente con extensión `.pdsprj`.
