@@ -2,7 +2,7 @@
 
 Proyecto académico de Ingeniería Electrónica realizado por **Raúl Martínez Martínez, Miguel Vela García y Julen Lorenzo Moa**. Se incorpora como muestra de integración de electrónica y programación de un microcontrolador.
 
-- [Memoria original](FTS_Proteus.pdf)
+- [Memoria con el anexo actualizado](FTS_Proteus.pdf)
 - [Código fuente del proyecto](codigo/main.ino)
 - [Paquete original de Proteus](Proyecto_FTS.zip) y [contenido descomprimido](proyecto/)
 - [Captura del circuito en Proteus](figuras/circuito_proteus.jpeg)
@@ -34,15 +34,9 @@ Estas comprobaciones se presentan como las descritas por los autores. El materia
 
 ## Correspondencia entre memoria y proyecto
 
-El código del paquete de Proteus y el anexo del PDF son versiones diferentes. Se ha comparado el contenido del listado con el archivo fuente, omitiendo los comentarios y el espaciado introducido por el PDF. Las diferencias funcionales localizadas son:
+El anexo de la memoria se ha sustituido por las 534 líneas del archivo fuente incluido en el proyecto. Se ha verificado su correspondencia con el código original, omitiendo comentarios y espaciado para la comparación. Ahora recoge la histéresis térmica, `bloqueo_secuencia` y la indicación de fallo basada en `tempready`.
 
-| Elemento | Anexo del PDF | Código del proyecto |
-|---|---|---|
-| `bloqueo_secuencia` | No aparece | Está declarada y se utiliza en el bucle principal |
-| Histéresis térmica | Comparación directa con los límites | Conserva el estado e incorpora el margen de 2 °C descrito en el texto |
-| LED de fallo térmico | Depende del límite superior de temperatura | Depende de `tempready` |
-
-Por tanto, las menciones del texto a la histéresis y a `bloqueo_secuencia` sí tienen correspondencia en el código original aportado. El anexo debe actualizarse para reflejar esa misma versión.
+El resto de las páginas del informe se conserva. El código del proyecto no se ha modificado.
 
 Se mantienen dos diferencias de documentación: el diagrama representa una lectura de batería que no aparece en el código y marca 5 s donde el texto habla de unos 10 s. Los retardos de los bucles también incluyen cálculos, conversiones y refresco de displays; no se han aportado registros que permitan verificar esas duraciones.
 
