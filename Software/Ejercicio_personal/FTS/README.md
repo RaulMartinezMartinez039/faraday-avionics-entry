@@ -1,12 +1,12 @@
 # Ejercicio personal — Simulación funcional en Proteus
 
-Proyecto académico de Ingeniería Electrónica realizado por **Raúl Martínez Martínez, Miguel Vela García y Julen Lorenzo Moa**. Se incorpora como muestra de integración de electrónica y programación de un microcontrolador.
+Proyecto académico de Ingeniería Electrónica realizado por **Raúl Martínez Martínez, Miguel Vela García y Julen Lorenzo Moa**. Se incorpora como muestra de integración de electrónica y programación de un microcontrolador. La aportación principal de Raúl Martínez Martínez fue la programación del microcontrolador.
 
-- [Memoria con el anexo actualizado](FTS_Proteus.pdf)
+- [Memoria revisada](FTS_Proteus.pdf)
 - [Código fuente del proyecto](codigo/main.ino)
 - [Paquete original de Proteus](Proyecto_FTS.zip) y [contenido descomprimido](proyecto/)
 - [Captura del circuito en Proteus](figuras/circuito_proteus.jpeg)
-- [Diagrama de flujo del planteamiento](figuras/diagrama_flujo.jpeg)
+- [Diagrama funcional actualizado](figuras/diagrama_flujo.pdf)
 
 ## Objetivo y alcance
 
@@ -36,9 +36,9 @@ Estas comprobaciones se presentan como las descritas por los autores. El materia
 
 El anexo de la memoria se ha sustituido por las 534 líneas del archivo fuente incluido en el proyecto. Se ha verificado su correspondencia con el código original, omitiendo comentarios y espaciado para la comparación. Ahora recoge la histéresis térmica, `bloqueo_secuencia` y la indicación de fallo basada en `tempready`.
 
-El resto de las páginas del informe se conserva. El código del proyecto no se ha modificado.
+La memoria identifica la aportación principal al código y presenta un diagrama funcional actualizado. Se ha retirado del diagrama la comprobación de batería, que no está implementada, y se ha aclarado que los bucles limitan la duración mediante iteraciones, sin atribuirles tiempos medidos. El código original se conserva.
 
-Se mantienen dos diferencias de documentación: el diagrama representa una lectura de batería que no aparece en el código y marca 5 s donde el texto habla de unos 10 s. Los retardos de los bucles también incluyen cálculos, conversiones y refresco de displays; no se han aportado registros que permitan verificar esas duraciones.
+El [diagrama en PNG](figuras/diagrama_flujo.png) y su [fuente LaTeX/TikZ](figuras/diagrama_flujo.tex) acompañan al PDF vectorial.
 
 ## Archivos y entorno del proyecto
 
